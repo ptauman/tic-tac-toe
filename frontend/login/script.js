@@ -22,7 +22,7 @@ loginForm.addEventListener("submit", async  (event) => {
     loginAndcreateToken(loginUser); 
 })
 async function loginAndcreateToken(loginUser) {
-    const response = await fetch("http://localhost:3000/login", {
+    const response = await fetch("http://localhost:3000/auth/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -38,7 +38,7 @@ async function loginAndcreateToken(loginUser) {
     }
 }
 async function createuser(newUser) {
-    const response = await fetch("http://localhost:3000/users", {
+    const response = await fetch("http://localhost:3000/auth/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
