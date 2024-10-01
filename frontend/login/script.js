@@ -7,7 +7,7 @@ registerForm.addEventListener("submit", async  (event) => {
     event.preventDefault();
     const newUser = {
         name : event.target[0].value,
-        password : event.target[1].value
+        passwordHash : event.target[1].value
     }
     createuser(newUser); 
 });
@@ -17,7 +17,7 @@ loginForm.addEventListener("submit", async  (event) => {
     event.preventDefault();
     const loginUser = {
         name : event.target[0].value,
-        password : event.target[1].value
+        passwordHash : event.target[1].value
     }
     loginAndcreateToken(loginUser); 
 })
